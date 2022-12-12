@@ -226,7 +226,16 @@ function schecker ()
     fi  
 }
 
-
+# Script to modify the brightness of the backlight of a given laptop
+light() 
+{
+	if [ -z $1]
+	then
+		xrandr --output DP-2 --brightness 1
+	else
+		xrandr --output DP-2 --birghtness "$1"
+	fi
+}
 
 #######################################################
 # nnn setup
